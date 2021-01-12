@@ -12,16 +12,27 @@ function paintMixer(color1, color2) {
   The order of the params should not matter.
   */
   // PLACE YOUR CODE BELOW
+  const mappedColors = {
+    bluered: "purple",
+    redgreen: "brown",
+    redyellow: "orange",
+    blueyellow: "green",
+  };
 
+  const mixedColor =
+    mappedColors[color1 + color2] || mappedColors[color2 + color1];
+
+  return mixedColor || "unknown";
   // PLACE YOUR CODE ABOVE
 }
 
-paintMixer('blue', 'red') === 'purple' && console.log('First mix worked')
-paintMixer('red', 'green') === 'brown' && console.log('Second mix worked')
-paintMixer('red', 'yellow') ==='orange' && console.log('Third mix worked')
-paintMixer('green', 'red')=== 'brown' && console.log('Fourth mix worked')
-paintMixer('blue', 'yellow') ==='green' && console.log('Fifth mix worked')
-paintMixer('apple', 'frog') ==='unknown' && console.log('Apples and frogs don\'t mix, as expected')
+paintMixer("blue", "red") === "purple" && console.log("First mix worked");
+paintMixer("red", "green") === "brown" && console.log("Second mix worked");
+paintMixer("red", "yellow") === "orange" && console.log("Third mix worked");
+paintMixer("green", "red") === "brown" && console.log("Fourth mix worked");
+paintMixer("blue", "yellow") === "green" && console.log("Fifth mix worked");
+paintMixer("apple", "frog") === "unknown" &&
+  console.log("Apples and frogs don't mix, as expected");
 
 /*
 If everything works, you should see the following on the console
